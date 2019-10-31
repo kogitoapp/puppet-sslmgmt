@@ -7,20 +7,30 @@
   "source": "https://github.com/tykeal/puppet-sslmgmt",
   "project_page": "https://github.com/tykeal/puppet-sslmgmt",
   "issues_url": "https://github.com/tykeal/puppet-sslmgmt/issues",
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "7.0" ]
-    }
-  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 4.4.0 <= 5.0.0" 
+      "version_requirement": ">= 4.4.0 <= 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7.0"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
     }
   ],
   "tags": [
     "ssl"
-  ]
+  ],
+  "pdk-version": "1.14.0",
+  "template-url": "pdk-default#1.14.0",
+  "template-ref": "1.14.0-0-g1bf3a4e"
 }
-
