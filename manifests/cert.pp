@@ -56,7 +56,7 @@
 #   Boolean to determine if the key & certificate should be installed as
 #   a single combined file. This setting expects that install key is
 #   true
-# 
+#
 #   NOTE: The public cert file will still be written out per normal but
 #   the keyfile will also have the fully realized certfile appended to
 #   the end as well.
@@ -115,7 +115,7 @@ define sslmgmt::cert (
   validate_bool($onefile)
 
   # get our certificate hash
-  $certificates = hiera('sslmgmt::certs')
+  $certificates = lookup('sslmgmt::certs')
   validate_hash($certificates)
 
   # make sure we actually have a cert
@@ -127,7 +127,7 @@ define sslmgmt::cert (
   if ($chain) {
     validate_string($chain)
 
-    $ca = hiera('sslmgmt::ca')
+    $ca = lookup('sslmgmt::ca')
     validate_hash($ca)
 
     if (! has_key($ca, $chain)) {
